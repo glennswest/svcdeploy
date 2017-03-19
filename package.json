@@ -1,0 +1,24 @@
+{
+  "name": "svcdeploy",
+  "version": "1.0.0",
+  "description": "Automated Deployment on OCP and RHEL Atomic",
+  "main": "deploy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/glennswest/svcdeploy.git"
+  },
+  "keywords": [
+    "kubernetes",
+    "openshift",
+    "docker"
+  ],
+  "author": "Glenn S West",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glennswest/svcdeploy/issues"
+  },
+  "homepage": "https://github.com/glennswest/svcdeploy#readme"
+}
