@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/glennswest/svcdeploy/issues"
   },
-  "homepage": "https://github.com/glennswest/svcdeploy#readme"
+  "homepage": "https://github.com/glennswest/svcdeploy#readme",
+  "dependencies": {
+    "exec": "^0.2.1",
+    "util": "^0.10.3"
+  }
 }
