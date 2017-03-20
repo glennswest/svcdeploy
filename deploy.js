@@ -2,33 +2,12 @@ var util = require('util');
 
 var exec=require('child_process').exec;
 
-var projects = ['rsc','serve1','serv2','serv3'];
-
 var svc_person = {name:'svcperson', image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
 var svc_mqtt   = {name:'svcmqtt',   image:'glennswest/svcmqtt',  port:"8080", stateful:true,mnt:'/work'};
 
-var server1_person = svc_person;
-var server2_person = svc_person;
-var server3_person = svc_person;
 
-server1_person.project = "serv1";
-server2_person.project = "serv2";
-server3_person.project = "serv3";
-
-server1_mqtt = svc_mqtt;
-server2_mqtt = svc_mqtt;
-server3_mqtt = svc_mqtt;
-
-server1_mqtt.project = "serv1";
-server2_mqtt.project = "serv2";
-server3_mqtt.project = "serv3";
-
-var deploy_list = [server1_person,
-                   server2_person,
-                   server3_person,
-                   server1_mqtt,
-                   server2_mqtt,
-                   server3_mqtt];
+var deploy_list = [svc_person,
+                   svc_mqtt];
 
 workq = [];
 project = "";
@@ -141,5 +120,4 @@ function create_projects(thelist)
 	thelist.forEach(createproject);
 }
 
-create_projects(projects);
 deploy(deploy_list);
