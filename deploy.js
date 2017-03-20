@@ -2,11 +2,35 @@ var util = require('util');
 
 var exec=require('child_process').exec;
 
-var svc_person = {name:'svcperson', image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
-var svc_mqtt   = {name:'svcmqtt',   image:'glennswest/svcmqtt',  port:"8080", stateful:true,mnt:'/work'};
+var svc_bill      = {name:'svcbill',      image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_devown    = {name:'svcdevown',    image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_devsee    = {name:'svcdevsee',    image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_devloc    = {name:'svcdevloc',    image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_loceui    = {name:'svcloceui',    image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_locpxy    = {name:'svclocpxy',    image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_nomloc    = {name:'svcnomloc',    image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_person    = {name:'svcperson',    image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_personloc = {name:'svcpersonloc', image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_rawloc    = {name:'svcrawloc',    image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_room      = {name:'svcroom",      image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_roomdev   = {name:'svcroomdev',   image:'glennswest/rockbase', port:"8080", stateful:true,mnt:'/data'};
+var svc_senexp    = {name:'svcsenexp',    image:'glennswest/rockbase', port:"8080", stateful:false};
+var svc_mqtt      = {name:'svcmqtt',      image:'glennswest/svcmqtt',  port:"8080", stateful:true,mnt:'/work'};
 
 
-var deploy_list = [svc_person,
+var deploy_list = [svc_bill,
+                   svc_devown,
+                   svc_devsee,
+                   svc_devloc,
+                   svc_locuei,
+                   svc_locpxy,
+                   svc_nompxy,
+                   svc_person,
+                   svc_personloc,
+                   svc_rawloc,
+                   svc_room,
+                   svc_roomdev,
+                   svc_senexp,
                    svc_mqtt];
 
 workq = [];
